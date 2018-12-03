@@ -110,28 +110,27 @@ def der_deklinierer(eingabewort):
     a_deklination = femininSG        
     o_deklination_maskulinum = maskulinSG
     o_deklination_neutrum = neutrumSG
-    if eingabewort.endswith((a_deklination.get("Nominativ")):
+    if eingabewort.endswith(a_deklination.get["Nominativ"]):
         endung = a_deklination("Nominativ")
         stamm = eingabewort[:-1]
         richtige_deklination = femininSG
-    elif: eingabewort.endswith((o_deklination_maskulinum.get("Nominativ")):
+    elif eingabewort.endswith(o_deklination_maskulinum.get["Nominativ"]):
         endung = o_deklination_maskulinum("Nominativ")
         stamm = eingabewort[:-1]
         richtige_deklination = maskulinSG
-    elif: eingabewort.endswith((o_deklination_neutrum.get("Nominativ")):
+    elif eingabewort.endswith(o_deklination_neutrum.get["Nominativ"]):
         endung = o_deklination_neutrum.get("Nominativ")
         stamm = eingabewort[:-1]
         richtige_deklination = neutrumSG
     else:
-        ausgabe = "Dieses Wort kann ich nicht verarbeiten. Sorry.")
+        ausgabe = ("Dieses Wort kann ich nicht verarbeiten. Sorry.")
         return ausgabe
- 
+    
+    for Kasus in richtige_deklination:
+      ausgabe = ausgabe + Kasus + ": " + stamm + richtige_deklination.get(Kasus)
+      return ausgabe 
 
-Hier muss noch die Ausgabe für das return-Statement unten gebaut werden-
-         Vielleicht mit einer Schleife?
-
-    return "TO-DO"
-
+v
 
 
 
