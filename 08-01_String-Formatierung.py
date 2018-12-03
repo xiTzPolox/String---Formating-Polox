@@ -114,11 +114,11 @@ def der_deklinierer(eingabewort):
         endung = a_deklination("Nominativ")
         stamm = eingabewort[:-1]
         richtige_deklination = femininSG
-    elif: eingabewort.endswith((o_deklination_maskulinum.get("Nominativ")):
+    elif eingabewort.endswith((o_deklination_maskulinum.get("Nominativ")):
         endung = o_deklination_maskulinum("Nominativ")
         stamm = eingabewort[:-1]
         richtige_deklination = maskulinSG
-    elif: eingabewort.endswith((o_deklination_neutrum.get("Nominativ")):
+    elif eingabewort.endswith((o_deklination_neutrum.get("Nominativ")):
         endung = o_deklination_neutrum.get("Nominativ")
         stamm = eingabewort[:-1]
         richtige_deklination = neutrumSG
