@@ -13,7 +13,7 @@ https://de.wikipedia.org/wiki/O-Deklination#Erste_Deklination_(a-Deklination)
 https://de.wikipedia.org/wiki/O-Deklination#Zweite_Deklination_(o-Deklination)
 
 2.
-Entwickeln Sie eine Funktion, die genau ein lateinisches Nomen in der Nominativ-  #aimca, amicus, pensum
+Entwickeln Sie eine Funktion, die genau ein lateinisches Nomen in der Nominativ-    #aimca, amicus, pensum
 form entgegen nimmt und 
    1. in Abhängigkeit von dessen Endung entscheidet, welche Deklination für #Nominativform defnieren
       dieses Wort angewendet werden muss und 
@@ -42,8 +42,9 @@ Akkusativ:  amicam
 Ablativ:    amica
 """
 """
+
 def der_deklinierer(eingabewort):         #für 2 und 3 benutzbar
-    a_deklination = {"femininSG":"DO"}          #erstmal nur SG einsetzen und testen  #für jede Deklination gucken ob das drin ist
+    a_deklination = {"TO":"DO"}          #erstmal nur SG einsetzen und testen  #für jede Deklination gucken ob das drin ist
     o_deklination_maskulinum = {"TO":"DO"}
     o_deklination_neutrum = {"TO":"DO"}
     if eingabewort.endswith("TO-DO"):
@@ -67,6 +68,8 @@ femininSG = {"Nominativ": "a", "Genitiv": "ae", "Dativ": "ae", "Akkusativ": "am"
 femininPL = {"Nominativ": "ae", "Genitiv": "arum", "Dativ": "is", "Akkusativ": "as", "Ablativ": "is"}
 maskulinSG = {"Nominativ": "us", "Genitiv": "i", "Dativ": "o", "Akkusativ": "um", "Ablativ": "o", "Vokativ": "e"}
 maskulinPL = {"Nominativ": "i", "Genitiv": "orum", "Dativ": "is", "Akkusativ": "os", "Ablativ": "is", "Vokativ": "i"}
+neutrumSG = {"Nominativ": "um", "Genitiv": "i", "Dativ": "o", "Akkusativ": "um", "Ablativ": "o", "Vokativ": "um"}
+neutrumPL = {"Nominativ": "a", "Genitiv": "orum", "Dativ": "is", "Akkusativ": "a", "Ablativ": "is", "Vokativ": "a"}
 
 print("Hier stehen die Singular Endungen des Femininums.")
 for word in femininSG:
@@ -87,7 +90,16 @@ print("Hier stehen die Plural Endungen des Maskulinums.")
 for word in maskulinPL:
   output = "Der Kasus lautet {} und besitzt eine '{}'-Endung".format(word, maskulinPL[word])
   print(output)
-
+print("-----")
+print("Hier stehen die Singular Endungen des Neutrums.")
+for word in neutrumSG:
+  output = "Der Kasus lautet {} und besitzt eine '{}'-Endung".format(word, neutrumSG[word])
+  print(output)
+print("-----")
+print("Hier stehen die Plural Endungen des Neutrums.")
+for word in neutrumPL:
+  output = "Der Kasus lautet {} und besitzt eine '{}'-Endung".format(word, neutrumPL[word])
+  print(output)
 
 
 
